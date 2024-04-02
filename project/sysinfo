@@ -1,0 +1,9 @@
+server {
+    listen 8000;
+    server_name .domainname;
+
+    location / {
+        include proxy_params;
+        proxy_pass http://localhost:5000;
+    }
+}
